@@ -24,9 +24,7 @@
             name = "rustlings";
             version = "5.3.0";
 
-            buildInputs = with pkgs; lib.optionals stdenv.isDarwin [
-              darwin.apple_sdk.frameworks.CoreServices
-            ];
+            buildInputs = cargoBuildInputs;
 
             src = with pkgs.lib; cleanSourceWith {
               src = self;
